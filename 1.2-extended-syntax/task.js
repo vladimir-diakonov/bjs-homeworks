@@ -30,7 +30,11 @@ function getAverageMark(marks){
     // return averageMark;
 }
 
-function askDrink(name,dateOfBirthday){
+function askDrink(name, dateOfBirthday){
     // код для задачи №3 писать здесь
+    let birthday = new Date(dateOfBirthday);
+    let yearNow = new Date();
+    let age = (yearNow.getFullYear() - birthday.getFullYear());
+    return age;
     // return result;
 }
