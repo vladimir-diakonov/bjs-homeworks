@@ -16,6 +16,17 @@ function getResult(a,b,c){
 
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
+    if (marks.length === 0) {
+        return 0;
+    } else if (marks.length === 1) {
+        return marks[0];
+    } else if (marks.length === 2) {
+        return (marks[0] + marks[1]) / marks.length;
+    } else if (marks.length === 3) {
+        return (marks[0] + marks[1] + marks[2]) / marks.length;
+    } else if (marks.length === 4) {
+        return (marks[0] + marks[1] + marks[2] + marks[3]) / marks.length;
+    } else return (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) / 5;
     // return averageMark;
 }
 
