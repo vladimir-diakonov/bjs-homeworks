@@ -15,18 +15,13 @@ function getResult(a,b,c){
 function getAverageMark(marks){
     // код для задачи №2 писать здесь
     let marksSum = 0;
-    if (marks.length === 0){
-        return 0;
-    } else if (marks.length > 5) {
+    if (marks.length > 0) {
         let firstFiveMarks = marks.slice(0, 5);
         for (let i = 0; i < firstFiveMarks.length; i++) {
             marksSum += firstFiveMarks[i];
         }
         return marksSum / firstFiveMarks.length;
-    } else for (let i = 0; i < marks.length; i++) {
-        marksSum += marks[i];
-    }
-    return marksSum / marks.length;
+    } else return 0;
     // return averageMark;
 }
 
