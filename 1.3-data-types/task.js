@@ -4,8 +4,8 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     let S = amount - contribution;
     let n = (date.getMonth() - new Date().getMonth()) + ((date.getFullYear() - new Date().getFullYear()) * 12);
     let P = percent / 12;
-    let payment = S * (P+P / (((1 + P) ** n) - 1));
-    if (isNaN(percent && contribution && amount)) {
+    const payment = S * (P+P / (((1 + P) ** n) - 1));
+    if (isNaN(percent) || isNaN(contribution) || isNaN(amount)) {
         return 'все поля должны содержать числа';
     } else return payment.toFixed(2);
     // return totalAmount;
@@ -14,8 +14,6 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 function getGreeting(name) {
     // код для задачи №2 писать здесь
     let nameCheck = name.trim();
-    if (nameCheck === "") {
-        return `Привет, мир! Меня зовут Аноним.`
-    } else return `Привет, мир! Меня зовут ${name}.`
+    return `Привет, мир! Меня зовут ${name || 'Аноним'}.`
     // return greeting;
 }

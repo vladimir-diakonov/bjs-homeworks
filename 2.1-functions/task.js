@@ -41,5 +41,19 @@ function showSolutionsMessage( a, b, c ) {
 
 //task 2.1.2
 function getAverageScore(data) {
-
+  let lessonAndMarks = data;
+  for (let lesson in lessonAndMarks) {
+    let marks = lessonAndMarks[lesson];
+    console.log(lesson, averageMark);
+  }
+  function getAverageMark(marks) {
+    let marksSum = 0;
+      for (let i = 0; i < marks.length; i++) {
+        marksSum += marks[i];
+        let averageMark = marksSum / marks.length;
+        return averageMark;
+    }
+}
 };
+
+
