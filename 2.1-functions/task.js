@@ -44,7 +44,6 @@ function getAverageScore(data) {
   let lessonAndMarks = data;
   for (let lesson in lessonAndMarks) {
     let marks = lessonAndMarks[lesson];
-    console.log(lesson, averageMark);
   }
   function getAverageMark(marks) {
     let marksSum = 0;
@@ -56,4 +55,19 @@ function getAverageScore(data) {
 }
 };
 
+//task 2.1.3
+function getPersonData(secretData) {
+  let name = secretData;
+  for (let prop in name) {
+    let value = name[prop];
+    let secret = {prop, value};
+    function getDecodedValue(secret) {
+      let aaa = firstName;
+      let bbb = lastName;
+      let 0 = 'Родриго';
+      let 1 = 'Эмильо';
+      return `${prop}`;
+    }
+  }
+}
 

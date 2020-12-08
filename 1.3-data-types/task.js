@@ -7,7 +7,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     const payment = S * (P+P / (((1 + P) ** n) - 1));
     if (isNaN(percent) || isNaN(contribution) || isNaN(amount)) {
         return 'все поля должны содержать числа';
-    } else return payment.toFixed(2);
+    } else return +payment.toFixed(2);
     // return totalAmount;
 }
 
