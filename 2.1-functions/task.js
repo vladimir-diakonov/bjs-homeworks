@@ -11,20 +11,20 @@ function getSolutions(a, b, c) {
   //};
 
   if (D < 0) {
-    return {
+    return ({
       D,
       x0
-    }
+    });
   } else if (D > 0) {
-    return {
+    return ({
       D,
       x1,
       x2
-    }
-  } else return {
+    });
+  } else return ({
     D,
     x1
-  };
+  });
 };
 
 function showSolutionsMessage( a, b, c ) {
@@ -64,8 +64,8 @@ function getPersonData(secretData) {
     function getDecodedValue(secret) {
       let aaa = firstName;
       let bbb = lastName;
-      let 0 = 'Родриго';
-      let 1 = 'Эмильо';
+      //let 0 = 'Родриго';
+      //let 1 = 'Эмильо';
       return `${prop}`;
     }
   }
