@@ -62,3 +62,38 @@ class DetectiveBook extends Book {
     this.type = 'detective';
   }
 }
+
+// task 2.3.2
+
+class Library {
+  constructor(name = '', books = []) {
+    this.name = name;
+    this.books = books;
+  }
+    addBook(book) {
+      if (book.state > 30) {
+      this.books.push(book);
+    }
+  }
+    findBookBy(type, value) {
+      for (let book of this.books) {
+        for (let key in book) {
+          if (key === type && book[key] === value) {
+            return book;
+          }
+        }
+      } return null;
+    }
+    giveBookByName(bookName) {
+      this.bookName = bookName;
+        for (let book of this.books) {
+            if (book.name === bookName) {
+                this.books.splice(this.books.indexOf(book), 1);
+                return book;
+            }
+        } return null;
+    }
+}
+
+// Task 2.3.3
+
