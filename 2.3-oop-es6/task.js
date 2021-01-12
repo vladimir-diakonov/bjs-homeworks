@@ -97,3 +97,39 @@ class Library {
 
 // Task 2.3.3
 
+class StudentLog {
+  constructor(studentName) {
+    this.studentName = studentName;
+    this.journalBook = [];
+  }
+    getName() {
+      return this.studentName;
+    }
+
+    addGrade(grade, subject) {
+      if (typeof grade != Number && grade <= 0 && grade >= 5) {
+        return `Вы пытались поставить оценку ${grade} по предмету ${subject}. Допускаются только числа от 1 до 5.` && this.journalBook[subject].length;
+      } else this.journalBook[subject].push(grade) && this.journalBook[subject].length;
+    }
+
+    getAverageBySubject(subject) {
+      if (this.journalBook[subject] != this.journalBook[subject]) {
+        return 0;
+      } else {
+        let sum = 0;
+      for (let mark of this.journalBook[subject]) {
+        sum += mark;  
+      } return sum / this.journalBook[subject].length;
+      }
+    }
+
+    getTotalAverage() {
+      let sum = 0;
+      let counter = 0;
+      for (let subject in this.journalBook) {
+          sum += this.getAverageBySubject(subject);
+          counter ++;
+      }
+      return sum / counter;
+  }
+}
