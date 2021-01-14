@@ -107,9 +107,13 @@ class StudentLog {
     }
 
     addGrade(grade, subject) {
-      if (typeof grade != Number && grade <= 0 && grade >= 5) {
-        return `Вы пытались поставить оценку ${grade} по предмету ${subject}. Допускаются только числа от 1 до 5.` && this.journalBook[subject].length;
-      } else this.journalBook[subject].push(grade) && this.journalBook[subject].length;
+      if (this.journalBook[subject] && (grade >= 1 && grade <= 5)) {
+        this.journalBook[subject].push(grade);
+        return this.journalBook[subject].length;
+      } else if (grade >= 1 && grade <= 5) {
+        this.journalBook[subject] = [grade];
+        return this.journalBook[subject].length;
+      } else return `Вы пытались поставить оценку ${grade} по предмету ${subject}. Допускаются только числа от 1 до 5.`;
     }
 
     getAverageBySubject(subject) {
