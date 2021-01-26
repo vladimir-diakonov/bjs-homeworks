@@ -12,12 +12,14 @@ let getReliableWeaponsNames = (durability) => weapons.filter(weapons => weapons.
 let getTotalDamage = () => weapons.reduce((allDamage, weapons) => allDamage + weapons.attack, 0);
 
 function getValuestCountToSumValues(arr, value) {
-  arr.reduce(sum, num) => {
+  let numQuantity = 1
+  arr.reduce((sum, num) => {
     sum += num;
     if (sum < value) {
-      return sum;
+      numQuantity ++;
     } return sum;
-  }, 0;
+  }, 0);
+  return numQuantity
 }
 
 //task 3.2
